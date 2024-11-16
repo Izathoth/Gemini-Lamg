@@ -155,8 +155,28 @@ Se você tentar acessar uma variável não declarada, o interpretador gerará um
 print(unknown_var);  // Erro: variável 'unknown_var' não foi declarada
 ```
 
+---
+
+
 ## Conclusão
 
 A linguagem **Gemini** é projetada para ser simples, eficiente e segura, com foco em manipulação de memória, como variáveis e listas, e um sistema de tipagem estática que permite controle rigoroso sobre os tipos de dados. A linguagem é ideal para quem procura uma maneira eficiente de programar com um conjunto básico de funcionalidades, mas com a possibilidade de expandir conforme necessário.
 
 Ao utilizar Gemini, os desenvolvedores podem escrever códigos simples e claros enquanto mantêm o controle total sobre as variáveis e seus tipos, tornando-a uma escolha ideal para aprendizado ou aplicações simples.
+
+
+
+---
+
+
+## Gemini - Informações
+
+**Criador: Izathoth**
+
+**Colaboradores: Izathoth**
+
+**Versão: 0.12**
+
+**Data de Publicação: 16/11/2024**
+
+**Licença: Apache 2.0**
