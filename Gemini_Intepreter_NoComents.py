@@ -149,4 +149,4 @@ another_age = "twenty five"  # This should trigger a type error
 
 # Inicializar e executar o interpretador
 interpreter = GeminiScriptInterpreter()
-interpreter.execute(code)
+interpreter.execute(code) #
