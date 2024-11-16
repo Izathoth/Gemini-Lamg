@@ -118,7 +118,7 @@ class GeminiScriptInterpreter:
             var_name = line.split('(')[1].split(')')[0].strip()
             self.variables[var_name].pop()
 
-# Código Gemini-Script com controle de fluxo e condições True/False
+
 code = """
 let Number age = 30
 let String name = "Alice"
