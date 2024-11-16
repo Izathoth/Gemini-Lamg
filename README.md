@@ -1,182 +1,275 @@
 
-# Documentação da Linguagem de Programação **Gemini**
+# Gemini-Script Documentation
 
-## Acrônimo de **Gemini**
+## Overview
 
-**G.E.M.I.N.I.**  
-**G**eneral-purpose  
-**E**xplicit  
-**M**emory-manipulating  
-**I**nterpreted  
-**N**ew-age  
-**I**nnovative  
+Gemini-Script (GS) is a lightweight and modern programming language with static typing, designed to be simple and intuitive. Its syntax is inspired by languages like Python and JavaScript but with a more robust flow control structure, as well as support for basic types such as `Number`, `String`, and `Boolean`.
 
-## Visão Geral
+Gemini-Script allows for variable manipulation, flow control, functions, lists, and more. The language focuses on simplicity and code clarity.
 
-Gemini é uma linguagem de programação projetada para ser simples e eficiente, com foco em manipulação básica de memória, incluindo variáveis e listas, e com tipagem estática. A linguagem foi inspirada por TypeScript e PHP, mas com uma sintaxe simplificada e moderna, ideal para desenvolvedores que desejam controle direto sobre a memória sem complexidade excessiva.
+---
 
-A tipagem estática oferece segurança ao código, garantindo que as variáveis sejam manipuladas de forma eficiente e sem erros de tipo. Gemini é uma linguagem interpretada, o que permite testes rápidos e uma experiência de desenvolvimento ágil.
+## Basic Syntax
 
-## Características Principais
+### 1. Variables
 
-1. **Tipagem Estática**: Suporte para tipos básicos como `Number` e `String`, garantindo que o tipo da variável seja especificado na declaração e validado durante a execução.
-2. **Manipulação de Memória**: Capacidade de trabalhar diretamente com variáveis e listas, permitindo fácil armazenamento e acesso a dados.
-3. **Controle de Fluxo Básico**: Estruturas condicionais como `if (True)` e `if (False)` para controle de fluxo.
-4. **Simplicidade e Clareza**: Sintaxe fácil de entender, baseada em conceitos de linguagens como PHP e TypeScript.
+In Gemini-Script (GS), variables are declared using the `let` keyword, followed by the variable type, name, and value.
 
-## Sintaxe
-
-### Declaração de Variáveis
-
-A declaração de variáveis em Gemini segue a estrutura:
-```gemini
-let <tipo> <nome_variavel> = <valor>;
+```text
+let <Type> <variable_name> = <value>
 ```
 
-- **Tipos disponíveis**:
-  - `Number`: Tipo numérico (inteiros).
-  - `String`: Tipo de texto (strings).
+- Variable Types:
+  - `Number`: Numeric type used for integers.
+  - `String`: Text type used for strings (text between quotes).
+  - `Boolean`: Logical type used for `True` or `False` values.
 
-Exemplo:
-```gemini
-let Number age = 30;
-let String name = "Alice";
-```
-
-### Atribuição de Valor
-
-Após a declaração, você pode atribuir novos valores a uma variável já existente, como:
-```gemini
-age = 31;
-name = "Bob";
-```
-
-Se tentar atribuir um valor de tipo incompatível, o interpretador gerará um erro.
-
-### Controle de Fluxo
-
-Gemini suporta estruturas condicionais simples, como `if`, que podem avaliar expressões booleanas:
-```gemini
-if (True)
-    print("This will be printed!");
-
-if (False)
-    print("This will not be printed.");
-```
-
-A condição pode ser `True` ou `False`, ou também pode envolver uma variável booleana.
-
-### Função de Impressão
-
-Para exibir valores, a linguagem utiliza a função `print`, que pode ser usada da seguinte forma:
-```gemini
-print(age);  // Imprime o valor de 'age'
-print(name); // Imprime o valor de 'name'
-```
-
-### Manipulação de Listas
-
-Gemini também suporta manipulação de listas simples. As operações básicas como `push` e `pop` são utilizadas para adicionar e remover elementos de listas.
-
-Exemplo de uso:
-```gemini
-let Number my_list = [1, 2, 3];
-push(my_list, 4);  // Adiciona 4 à lista
-pop(my_list);      // Remove o último item da lista
-```
-
-### Exemplo Completo
-
-```gemini
-let Number age = 30;
-let String name = "Alice";
-let Number balance = 1000;
-
-print(age);
-print(name);
-print(balance);
-
-if (True)
-    print("Condition is True");
-
-if (False)
-    print("Condition is False");
-
-age = 31;  // Atualizando a variável age
-name = "Bob";  // Atualizando a variável name
-
-print(age);
-print(name);
-```
-
-## Funcionalidades e Funções
-
-### Função `print`
-
-- **Descrição**: Imprime o valor de uma variável ou expressão no console.
-- **Sintaxe**: `print(<expressao>);`
-- **Exemplo**:
-  ```gemini
-  print(age);  // Imprime o valor de 'age'
-  ```
-
-### Função `push`
-
-- **Descrição**: Adiciona um valor ao final de uma lista.
-- **Sintaxe**: `push(<lista>, <valor>);`
-- **Exemplo**:
-  ```gemini
-  push(my_list, 5);  // Adiciona 5 à lista
-  ```
-
-### Função `pop`
-
-- **Descrição**: Remove o último valor de uma lista.
-- **Sintaxe**: `pop(<lista>);`
-- **Exemplo**: 
-  ```gemini
-  pop(my_list);  // Remove o último item da lista
-  ```
-
-## Erros Comuns
-
-### Erro de Tipo
-
-Ao tentar atribuir um valor de tipo incompatível, o interpretador irá gerar um erro de tipo. Exemplo:
-
-```gemini
-let Number age = "Alice";  // Erro: Esperado um número, mas foi fornecida uma string
-```
-
-### Erro de Variável Não Declarada
-
-Se você tentar acessar uma variável não declarada, o interpretador gerará um erro:
-```gemini
-print(unknown_var);  // Erro: variável 'unknown_var' não foi declarada
+**Example:**
+```text
+let Number age = 30
+let String name = "Alice"
+let Boolean is_active = True
 ```
 
 ---
 
+### 2. Control Flow
 
-## Conclusão
+#### Conditional `if`
 
-A linguagem **Gemini** é projetada para ser simples, eficiente e segura, com foco em manipulação de memória, como variáveis e listas, e um sistema de tipagem estática que permite controle rigoroso sobre os tipos de dados. A linguagem é ideal para quem procura uma maneira eficiente de programar com um conjunto básico de funcionalidades, mas com a possibilidade de expandir conforme necessário.
+The `if` statement checks if a condition is true and executes the corresponding block of code.
 
-Ao utilizar Gemini, os desenvolvedores podem escrever códigos simples e claros enquanto mantêm o controle total sobre as variáveis e seus tipos, tornando-a uma escolha ideal para aprendizado ou aplicações simples.
+```text
+if (<condition>)
+    <statements>
+```
 
+- Example:
+  ```text
+  if (True)
+      print("This will print because the condition is True")
+  ```
 
+#### Conditional `else`
+
+The `else` block executes when the `if` condition is false.
+
+```text
+if (<condition>)
+    <statements>
+else
+    <statements>
+```
+
+- Example:
+  ```text
+  if (False)
+      print("This will not print")
+  else
+      print("This will print because the condition is False")
+  ```
 
 ---
 
+### 3. Functions
 
-## Gemini - Informações
+Functions can be defined using the `func` keyword, followed by the function name and body.
 
-**Criador: Izathoth**
+```text
+func <function_name>()
+    <statements>
+```
 
-**Colaboradores: Izathoth**
+**Example:**
+```text
+func greet()
+    print("Hello, Gemini-Script!")
+```
 
-**Versão: 0.12**
+To call the function:
+```text
+greet()
+```
 
-**Data de Publicação: 16/11/2024**
+---
 
-**Licença: Apache 2.0**
+### 4. Printing
+
+The `print()` function is used to display values or variables to the console.
+
+```text
+print(<value>)
+```
+
+**Example:**
+```text
+print("Hello, Gemini-Script!")
+```
+
+---
+
+### 5. Variable Assignment
+
+Variables can be reassigned after their declaration using the `=` operator.
+
+```text
+<variable_name> = <new_value>
+```
+
+**Example:**
+```text
+age = 31
+name = "Bob"
+```
+
+---
+
+### 6. List Manipulation
+
+You can manipulate lists with the `push` and `pop` commands.
+
+- `push(<value>)`: Adds a value to the list.
+- `pop()`: Removes the last value from the list.
+
+**Example:**
+```text
+let List numbers = []
+push(numbers, 10)
+push(numbers, 20)
+pop(numbers)
+```
+
+---
+
+## Types
+
+### 1. `Number`
+Used for storing integer values.
+
+- Example:
+  ```text
+  let Number age = 25
+  ```
+
+### 2. `String`
+Used for storing text between quotes.
+
+- Example:
+  ```text
+  let String name = "Gemini"
+  ```
+
+### 3. `Boolean`
+Used for storing logical values: `True` or `False`.
+
+- Example:
+  ```text
+  let Boolean is_active = True
+  ```
+
+---
+
+## Control Flow
+
+### 1. `if`
+
+The `if` statement checks a boolean condition and executes the corresponding block of code.
+
+```text
+if (<condition>)
+    <statements>
+```
+
+**Example:**
+```text
+if (True)
+    print("Condition is true")
+```
+
+### 2. `else`
+
+The `else` statement is used to execute an alternative block of code when the `if` condition is false.
+
+```text
+if (<condition>)
+    <statements>
+else
+    <statements>
+```
+
+**Example:**
+```text
+if (False)
+    print("This will not execute")
+else
+    print("This will execute")
+```
+
+---
+
+## Errors and Debugging
+
+Gemini-Script has a simple error control structure, including type checks and undeclared variable handling.
+
+Example errors:
+- **Type Error**: Attempting to assign a value of an incompatible type to a variable.
+  ```text
+  let Number age = "twenty"  # Error: Invalid value for age. Expected a Number.
+  ```
+
+- **Undeclared Variable Error**:
+  ```text
+  print(undeclared_variable)  # Error: undeclared_variable not defined.
+  ```
+
+---
+
+## Examples
+
+### 1. Hello World
+
+```text
+let String greeting = "Hello, Gemini-Script!"
+print(greeting)
+```
+
+### 2. Simple Function
+
+```text
+func greet()
+    print("Hello!")
+greet()
+```
+
+### 3. Flow Control with `if` and `else`
+
+```text
+let Boolean is_logged_in = True
+
+if (is_logged_in)
+    print("Welcome!")
+else
+    print("Please log in.")
+```
+
+---
+
+## Additional Information
+
+- **Creator**: Izathoth
+- **Contributors**: Izathoth
+- **Version**: 0.12
+- **Release Date**: 16/11/2024
+- **License**: Apache 2.0
+
+---
+
+## Conclusion
+
+Gemini-Script (GS) is an intuitive and simple language ideal for learning programming logic and for lightweight applications where static typing and flow control are required. Its syntax is easy to understand, and the language provides essential programming fundamentals in a clear manner.
+
+---
+
+### Next Steps
+- Try writing your own programs in Gemini-Script!
+- Explore more features, such as list manipulation and creating more complex functions.
